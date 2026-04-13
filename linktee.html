@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>AQUA GLASS | Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f1ea;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        /* Dark Mode */
+        body.dark-mode {
+            background: #0f1a24;
+        }
+        
+        .container {
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Profilbereich */
+        .profile {
+            margin-bottom: 2rem;
+        }
+        
+        .logo-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid #c5a572;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #0a2540;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        
+        body.dark-mode h1 {
+            color: #f0f0f0;
+        }
+        
+        .tagline {
+            font-size: 0.9rem;
+            color: #c5a572;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+        }
+        
+        .bio {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        body.dark-mode .bio {
+            color: #c0c0c0;
+        }
+        
+        /* Link-Buttons */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: white;
+            color: #0a2540;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid #e0dcd3;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+        
+        body.dark-mode .link-btn {
+            background: #1a2a3a;
+            color: #f0f0f0;
+            border-color: #2a3a4a;
+        }
+        
+        .link-btn i {
+            width: 24px;
+            font-size: 1.2rem;
+            color: #c5a572;
+        }
+        
+        .link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: #c5a572;
+        }
+        
+        /* Dark Mode Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: white;
+            border: 1px solid #e0dcd3;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        
+        body.dark-mode .theme-toggle {
+            background: #1a2a3a;
+            border-color: #2a3a4a;
+        }
+        
+        .theme-toggle svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: #c5a572;
+            stroke-width: 2;
+        }
+        
+        .theme-toggle .sun {
+            display: none;
+        }
+        
+        body.dark-mode .theme-toggle .moon {
+            display: none;
+        }
+        
+        body.dark-mode .theme-toggle .sun {
+            display: block;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: #aaa;
+        }
+        
+        body.dark-mode .footer {
+            color: #666;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem;
+            }
+            
+            .link-btn {
+                padding: 0.9rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .theme-toggle {
+                bottom: 1rem;
+                right: 1rem;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+    </div>
+
+    <div class="container">
+        <!-- Profil -->
+        <div class="profile">
+            <!-- Ersetze das src mit deinem Logo-Pfad -->
+            <img src="Logo.jpeg" alt="AQUA GLASS" class="logo-img" onerror="this.src='https://via.placeholder.com/100x100?text=AG'">
+            <h1>AQUA GLASS</h1>
+            <div class="tagline">Premium Fensterreinigung</div>
+            <p class="bio">Kristallklare Reinheit mit Leidenschaft. Jetzt kontaktieren für ein unverbindliches Angebot.</p>
+        </div>
+        
+        <!-- Links - HIER TRÄGST DU DEINE LINKS EIN -->
+        <div class="links">
+            <!-- Website -->
+            <a href="https://aqua-glass.de/" target="_blank" class="link-btn">
+                <i class="fas fa-globe"></i>
+                <span>Unsere Website</span>
+            </a>
+            
+            <!-- Instagram -->
+            <a href="https://instagram.com/DEIN_PROFIL" target="_blank" class="link-btn">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            
+            <!-- Facebook -->
+            <a href="https://facebook.com/DEINE_SEITE" target="_blank" class="link-btn">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            
+            <!-- WhatsApp -->
+            <a href="https://wa.me/491721611315" target="_blank" class="link-btn">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            
+            <!-- Telefon -->
+            <a href="tel:+491721611315" class="link-btn">
+                <i class="fas fa-phone"></i>
+                <span>Anrufen</span>
+            </a>
+            
+            <!-- E-Mail -->
+            <a href="mailto:info@aqua-glass.de" class="link-btn">
+                <i class="fas fa-envelope"></i>
+                <span>E-Mail schreiben</span>
+            </a>
+            
+            <!-- Google Maps (Firmenadresse) -->
+            <a href="https://www.google.com/maps/place/Raunheim/@50.0137946,8.4514799,14z/data=!3m1!4b1!4m6!3m5!1s0x47bd9f0c1aa95373:0x422435029b09c30!8m2!3d50.0109516!4d8.4550395!16zL20vMGRxM3R3?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="link-btn">
+                <i class="fas fa-location-dot"></i>
+                <span>Adresse anzeigen</span>
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© <span id="currentYear"></span> AQUA GLASS Premium Fensterreinigung</p>
+        </div>
+    </div>
+
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        const currentTheme = localStorage.getItem('linktree-theme');
+        
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('linktree-theme', 'dark');
+            } else {
+                localStorage.setItem('linktree-theme', 'light');
+            }
+        });
+        
+        // Aktuelles Jahr im Footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
